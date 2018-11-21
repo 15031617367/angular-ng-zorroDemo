@@ -1,0 +1,30 @@
+<div>
+    <h2>路由传参测试</h2>
+    <div>
+        <ul>
+            <li>{{listData.name}}</li>
+            <li>{{listData.number}}</li>
+            <li>{{listData.state}}</li>
+        </ul>
+    </div>
+
+    <h2>进度条</h2>
+    <nz-steps>
+        <nz-step nzTitle="提交" 
+                nzStatus="finish" 
+                nzIcon="anticon anticon-user"></nz-step>
+        <nz-step nzTitle="出单" 
+                nzStatus="finish" 
+                nzIcon="anticon anticon-solution"></nz-step>
+        <nz-step nzTitle="审核"
+                 nzStatus="process"
+                 nzIcon="anticon anticon-spin anticon-loading"></nz-step>
+        <nz-step nzTitle="完成"
+                 nzStatus="wait"
+                 [nzIcon]="iconTemplate"></nz-step>
+        <ng-template #iconTemplate>
+            <i class="anticon anticon-smile-o"></i>
+        </ng-template>
+    </nz-steps>
+
+</div>

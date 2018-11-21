@@ -1,0 +1,33 @@
+.input_row{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+.input_left,
+.input_center,
+.iinput_right{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_tit{
+    width:20%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.input_inp{
+    width:80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.input{
+    width: 80%;
+}

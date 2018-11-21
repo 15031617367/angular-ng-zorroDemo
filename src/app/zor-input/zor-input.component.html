@@ -1,0 +1,43 @@
+<div>
+    <div>angular表单测试</div>
+    <div>
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="userName">用户名</nz-form-label>
+                <nz-form-control [nzSpan]="5">
+                        <input type="text" 
+                                nz-input 
+                                id="userName"
+                                formControlName="userName" 
+                                placeholder="请输入用户名">
+                </nz-form-control>
+            </nz-form-item> 
+
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="passWord">密码</nz-form-label>
+                <nz-form-control [nzSpan]="5">
+                        <input type="password" 
+                            nz-input 
+                            id="passWord"
+                            formControlName="passWord" 
+                            placeholder="请输入密码">
+                </nz-form-control>
+            </nz-form-item> 
+              
+            <nz-form-item>
+                <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                    <button nz-button 
+                            class="login-form-button" 
+                            [nzType]="'primary'">登录</button>
+                </nz-form-control>
+            </nz-form-item>
+
+        </form>
+    </div>
+
+
+
+
+
+
+</div>

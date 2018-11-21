@@ -1,0 +1,66 @@
+<div class="particle">
+    <particles [style]="style" [width]="width" [height]="height" [params]="params"></particles>
+    <div class="login_module">
+        <div class="login_input_module">
+            <div class="login_input_module_title">
+                angular后台管理系统
+            </div>
+            <div class="login_input_module_input">
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzFor="text">用户名</nz-form-label>
+                    <nz-form-control [nzSpan]="14">
+                        <input nz-input [(ngModel)]="nuser" type="text" id="text"  placeholder="请输入用户名">
+                    </nz-form-control>
+                </nz-form-item >
+            </div>
+            <div class='login_input_module_input'>
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="6" nzFor="password">密码</nz-form-label>
+                    <nz-form-control [nzSpan]="14">
+                        <input nz-input [(ngModel)]="pws" type="password" id="password"  placeholder="请输入密码">
+                        <nz-form-explain *ngIf="alterIf" class="alter">账号和密码不匹配</nz-form-explain>
+                    </nz-form-control>
+                </nz-form-item >
+            </div>
+            <div class="login_input_module_button">
+                <button nz-button nzType="primary" (click)="loginBtn()">登录</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- <div class="login_module">
+    <div class="login_input_module">
+        <div class="login_input_module_title">
+            angular后台管理系统
+        </div>
+        <div class="login_input_module_input">
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="text">用户名</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <input nz-input [(ngModel)]="nuser" type="text" id="text"  placeholder="请输入用户名">
+                </nz-form-control>
+            </nz-form-item >
+        </div>
+        <div class='login_input_module_input'>
+            <nz-form-item>
+                <nz-form-label [nzSpan]="6" nzFor="password">密码</nz-form-label>
+                <nz-form-control [nzSpan]="14">
+                    <input nz-input [(ngModel)]="pws" type="password" id="password"  placeholder="请输入密码">
+                    <nz-form-explain *ngIf="alterIf" class="alter">账号和密码不匹配</nz-form-explain>
+                </nz-form-control>
+            </nz-form-item >
+        </div>
+        <div class="login_input_module_button">
+            <button nz-button nzType="primary" (click)="loginBtn()">登录</button>
+        </div>
+    </div>
+</div> -->
+
+

@@ -1,0 +1,52 @@
+<div>
+
+    <nz-table #basicTable [nzData]="dataSet">
+            <thead>
+                <tr>
+                <th>产品</th>
+                <th>单价</th>
+                <th>状态</th>
+                <th>状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of basicTable.data, index as i" >
+                <td>{{data.name}}</td>
+                <td>{{data.number}}</td>
+                <td>{{data.state}}</td>
+                <td>
+                    <button 
+                    nz-button 
+                    class="button"
+                    [nzSize]="size" 
+                    (click)="deleBtn(basicTable.data,data,i)"
+                    nzType="danger">删除</button>
+                    <button 
+                     nz-button
+                     [nzSize]="size" 
+                     (click)="details(data)"
+                     nzType="primary">详情</button>
+                     <button 
+                        nz-button
+                        class="button" 
+                        [nzSize]="size" 
+                        (click)="Page(data)"
+                        nzType="dashed">子页</button>
+
+                </td>
+                </tr>
+            </tbody>
+    </nz-table>
+</div>
+
+<!-- 模态框 -->
+<div>   
+    <nz-modal [(nzVisible)]="isVisible" 
+              nzTitle="产品详情" 
+              (nzOnCancel)="handleCancel()" 
+              (nzOnOk)="handleOk()">
+        <p>产品：{{ModelData.name}}</p>
+        <p>单价：{{ModelData.Price}}</p>
+        <p>状态：{{ModelData.state}}</p>
+    </nz-modal>
+</div>

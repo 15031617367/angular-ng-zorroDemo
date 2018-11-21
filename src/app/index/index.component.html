@@ -1,0 +1,62 @@
+<nz-layout class="layout">
+    <nz-header>
+        <div class="header_title">anglar后台管理系统</div>
+    </nz-header>
+    <nz-layout>
+      <nz-sider [nzWidth]="200" style="background:#fff">
+        <ul nz-menu [nzMode]="'inline'" style="height:100%">
+          <li nz-submenu>
+            <span title><i class="anticon anticon-user"></i>ng-zorro</span>
+            <ul>
+              <li nz-menu-item (click)="routerBtn('index')">表格</li>
+              <li nz-menu-item (click)="routerBtn('index/input')">表单</li>
+              <li nz-menu-item (click)="routerBtn('index/calendar')">日历组件</li>
+              <li nz-menu-item (click)="routerBtn('index/http')">HTTP请求</li>
+            </ul> 
+          </li>
+          <li nz-submenu>
+            <span title><i class="anticon anticon-laptop"></i>echer</span>
+            <ul>
+              <li nz-menu-item (click)="routerBtn('index/bar')">柱状图</li>
+              <li nz-menu-item (click)="routerBtn('index/line')">折线图</li>
+              <li nz-menu-item (click)="routerBtn('index/radar')">雷达图</li>
+              <li nz-menu-item (click)="routerBtn('index/scatter')">散点图</li>
+            </ul>
+          </li>
+        </ul>
+      </nz-sider>
+      <nz-layout style="padding:0 24px 24px">
+        <!-- <nz-breadcrumb style="margin:16px 0;">
+          <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+          <nz-breadcrumb-item>List</nz-breadcrumb-item>
+          <nz-breadcrumb-item>App</nz-breadcrumb-item>
+        </nz-breadcrumb> -->
+        <!-- 主要内容 -->
+        <nz-content style="margin:16px 0;background:#fff; padding: 24px; min-height: 280px;">
+            <router-outlet></router-outlet>
+        </nz-content>
+      </nz-layout>
+    </nz-layout>
+</nz-layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
